@@ -42,7 +42,7 @@ void ACProjectTPSActor::MyTraceFunction()
 	DrawDebugLine(GetWorld(), TraceStart, TraceEnd, FColor::Red, false, 0.5f, 0, 1);
 	bool bIsHit = GetWorld()->LineTraceSingleByChannel(HitResult, TraceStart, TraceEnd, ECC_Visibility, QueryParams);
 
-	if (HitResult.bBlockingHit)
+	if (bIsHit)
 	{
 		GEngine->AddOnScreenDebugMessage(1, 1, FColor::Green, TEXT("It's hitting something"));
 	}
