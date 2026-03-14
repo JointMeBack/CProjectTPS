@@ -32,6 +32,16 @@ protected:
 
 	virtual void BeginPlay() override;
 
+	UFUNCTION(BlueprintImplementableEvent)
+	void NotifyActor(AActor *Actor);
+
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+
+	bool TraceForPhysicsBodies (AActor* HitActor, UPrimitiveComponent*& HitComponent);
+
+	UFUNCTION()
+	void MyTraceFunction();
+
 public:	
 
 	virtual void Tick(float DeltaTime) override;
